@@ -49,10 +49,12 @@
             width: 400px;
             height: 550px;
             transform-style: preserve-3d;
+            -webkit-transform-style: preserve-3d;
             transition: all 0.8s ease;
             cursor: pointer;
             border-radius: 10px;
             box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            will-change: transform;
         }
 
         .birthdayCard.flipped {
@@ -64,6 +66,9 @@
             width: 100%;
             height: 100%;
             backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            transform-style: preserve-3d;
+            -webkit-transform-style: preserve-3d;
             background: linear-gradient(135deg, #fff5f5, #ffe3e3);
             padding: 30px;
             border: 5px solid #ff6b6b;
@@ -75,11 +80,13 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            z-index: 2;
         }
 
         .cardInside {
             transform: rotateY(180deg);
             background: linear-gradient(135deg, #fff5f5, #ffe3e3);
+            z-index: 1;
         }
 
         /* Book spine effect */
