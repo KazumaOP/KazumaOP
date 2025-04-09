@@ -55,7 +55,7 @@
             box-shadow: 0 20px 50px rgba(0,0,0,0.5);
         }
 
-        .birthdayCard:hover {
+        .birthdayCard.flipped {
             transform: rotateY(180deg);
         }
 
@@ -161,7 +161,7 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
 
-        .bdyboy:hover {
+        .bdyboy.flipped{
             transform: scale(1.05) rotate(5deg);
         }
 
@@ -340,7 +340,11 @@
         </div>
     </div>
     <img src="cat.gif" alt="cat" class="cat">
-
+    <script>
+        document.querySelector('.birthdayCard').addEventListener('click', function () {
+            this.classList.toggle('flipped');
+        });
+    </script>
 
     
 </body>
